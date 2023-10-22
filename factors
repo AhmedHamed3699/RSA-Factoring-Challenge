@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+import sys
+
+if __name__ == "__main__":
+    with open(sys.argv[1], 'rb') as file:
+        for line in file:
+            n = int(line)
+            i = 2
+            while n % i:
+                i += 1
+            print(f'{n}={n // i}*{i}')
